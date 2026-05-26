@@ -2,7 +2,6 @@ import streamlit as st
 import requests
 import pandas as pd
 import plotly.express as px
-
 st.set_page_config(page_title="Asset Portfolio Tracker", layout="wide")
 st.title("Real-Time Asset Portfolio Tracker")
 
@@ -88,7 +87,6 @@ else:
         
     with right_ui:
         st.write("### Asset Distribution Allocation")
-        # Generate an interactive pie chart dynamically using Plotly
         fig = px.pie(df, values="Current Value ($)", names="Asset", hole=0.4,
                      color_discrete_sequence=px.colors.sequential.RdBu)
         fig.update_layout(margin=dict(t=10, b=10, l=10, r=10))
